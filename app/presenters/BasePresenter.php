@@ -41,8 +41,8 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
         foreach ($methods as $method) {
             $this->template->registerHelper($method->getName(), 'Helpers::'.$method->getName());
         }
-        $this->template->kategorie = $this->kategorie->getMenu();
-        $this->template->aktuality = $this->clanky->getClanky(5, 0,"aktuality",null,true);
+        //$this->template->kategorie = $this->kategorie->getMenu();
+        //$this->template->aktuality = $this->clanky->getClanky(5, 0,"aktuality",null,true);
 
     }
 
