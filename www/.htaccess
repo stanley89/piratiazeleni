@@ -12,14 +12,14 @@
 	# RewriteBase /
 
 
-RewriteCond %{HTTP_HOST} plisty\.cz [NC]
-RewriteRule ^(.*)$ http://www.piratskelisty.cz/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} piratizeleni\.cz [NC]
+RewriteRule ^(.*)$ http://www.piratiazeleni.cz/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} piratske-listy\.cz [NC]
-RewriteRule ^(.*)$ http://www.piratskelisty.cz/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} pirati-zeleni\.cz [NC]
+RewriteRule ^(.*)$ http://www.piratiazeleni.cz/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^piratskelisty\.cz [NC]
-RewriteRule ^(.*)$ http://www.piratskelisty.cz/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^piratiazeleni\.cz [NC]
+RewriteRule ^(.*)$ http://www.piratiazeleni.cz/$1 [R=301,L]
 
 
 	# prevents files starting with dot to be viewed by browser
