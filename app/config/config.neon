@@ -24,11 +24,14 @@ nette:
 
 
 services:
+	- App\UserManager
 	- App\RouterFactory
 	- Models\Uzivatele
 	- Models\Kategorie
 	- Models\Clanky
 	- Models\Komentare
+	- Models\Kandidati
+
 	- Models\Upload
 
 	router: @App\RouterFactory::createRouter

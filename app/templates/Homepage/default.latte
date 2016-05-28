@@ -1,7 +1,42 @@
 
 {block content}
-<h1>Piráti a Strana zelených</h1>
-<h2>Krajské volby 2016, Královéhradecký kraj</h2>
+<h1>Krajské volby 2016, Královéhradecký kraj</h1>
+{snippet clanky}
+{foreach $clanky as $clanek}
+<div class="prispevek">
+{if !empty($clanek->obrazek_id)}
+<div class="clanek_obrazek">
+<a n:href="Clanek:default $clanek->id, Nette\Utils\Strings::webalize($clanek['titulek'])">
+{if !empty($clanek->obrazek_id)}
+<img src="{link Service:Thumbnail:default $clanek->obrazek_id, 'width' => 200, 'format' => png}" alt="{$clanek->alt}" title="{$clanek->title}" />
+{/if}
+</a>
+</div>
+{/if}
+<div class="clanek_nahled {if empty($clanek->obrazek_id)}clanek_nahled_velky{/if}">
+<div class="color{$clanek->kategorie_id} kategorie_mala">{$clanek->kategorie|stripTags}</div>
+<h2><a n:href="Clanek:default $clanek->id, Nette\Utils\Strings::webalize($clanek['titulek'])">{!$clanek->titulek}</a></h2>
+<div class="datum_diskuze" >{*$clanek->datum_vydani|date:"%d. %m. %Y"*}
+
+ {if !empty($clanek->komentaru)}| {$clanek->komentaru} komentářů{/if}
+ </div>
+<p>{!$clanek->perex|truncate:200}</p>
+</div>
+</div>
+<div class="clear"></div>
+{/foreach}
+{/snippet}
+
+{snippet nacist}
+{ifset $nacist}
+    {if !empty($clanky)}
+    <a n:href="default, 'offset' => $next_offset, 'url' => $url, 'stitek' => $stitek, 'search' => $search" class="ajax nacist" >zobrazit dalších {$limit} článků</a>
+    {else}
+    <p>V kategorii zatím nejsou žádné články.</p>
+    {/if}
+{/ifset}
+{/snippet}
+
 <p>
 Česká pirátská strana a Strana zelených budou v krajských volbách 2016 v Královéhradeckém kraji kandidovat v koalici.
 </p>

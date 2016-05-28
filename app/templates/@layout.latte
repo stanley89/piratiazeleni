@@ -42,11 +42,28 @@
     <div id="hlavicka">
     <div id="menu">
 
-    <a n:href="Homepage:" title="Úvodní stránka">Úvodní stránka</a> | <a n:href="Homepage:kontakt" title="Kontakt">Kontakt</a> </div>
-    <a href="./" title="Piráti a Strana zelených – Krajské volby 2016, Královéhradecký kraj">
-    <img src="images/logo.png" alt="Piráti a Strana zelených – Krajské volby 2016, Královéhradecký kraj" width="360" border="0" /></a>
+    <a n:href=":Homepage:" title="Aktuálně">Aktuálně</a>
+    | <a n:href=":Kandidati:default" title="Kandidáti">Kandidáti</a>
+    | <a n:href=":Homepage:kontakt" title="Kontakt">Kontakt</a>
+    </div>
+    <a n:href=":Homepage:" title="Piráti a Strana zelených – Krajské volby 2016, Královéhradecký kraj">
+        <img src="{$basePath}/images/logo.png" alt="Piráti a Strana zelených – Krajské volby 2016, Královéhradecký kraj" border="0" /></a>
     </div>
     <hr class="cleaner" />
+        {if $user->isLoggedIn()}
+    <div class="redakce">
+        {if $user->isInRole("spravce")}
+            <a n:href=":Redakce:Spravce:">Správa</a>
+        {/if}
+        {if $user->isInRole("redaktor")}
+            <a n:href=":Redakce:Clanky:">Články</a>
+        {/if}
+        {if $user->isInRole("autor")}
+            <a n:href=":Redakce:Upload:">Soubory</a>
+        {/if}
+        <a n:href=":Sign:out">Odhlásit se</a>
+    </div>
+        {/if}
     <div id="hlavnipanel">
 
 
@@ -56,25 +73,25 @@
 
 
     <hr class="cleaner" />
-    <div id="spodni-info">
+ {*   <div id="spodni-info">
     <a href="http://zeleni.cz" title="Oficiální internetová prezentace Strany zelených">
     <img src="images/zeleni.png" alt="" border="0" width="200" align="right" /></a>
     <a href="http://pirati.cz" title="Oficiální internetová prezentace České pirátské strany">
     <img src="images/pirati.png" alt="" border="0" width="200" align="left" /></a>
     </div>
-
-    <div class="fb-like-box" data-href="https://www.facebook.com/pirati.khk" data-width="450" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false" style="float:left;"></div>
+*}
+ {*   <div class="fb-like-box" data-href="https://www.facebook.com/pirati.khk" data-width="450" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false" style="float:left;"></div>
     <div class="fb-like-box" style="float:right;" data-href="https://www.facebook.com/zelenehradecko" data-width="450" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
-
+*}
     <div align="center">
 
 
     <p class="seda cv" align="center">
 
-    <a href="./" title="Piráti a Strana zelených">
-    <img src="/images/logo.png" alt="Piráti a Strana zelených" width="200" border="0" /></a>
+    <a n:href=":Homepage:" title="Piráti a Strana zelených">
+    <img src="{$basePath}/images/logo.png" alt="Piráti a Strana zelených" width="200" border="0" /></a>
     <br />
-    <small>Design: <a href="htttp://jarnemec.com" target="new">jarnemec.com</a> (<a href="https://creativecommons.org/licenses/by/3.0/cz/" target="new">CC BY 3.0 CZ</a>)</small>
+   {* <small>Design: <a href="htttp://jarnemec.com" target="new">jarnemec.com</a> (<a href="https://creativecommons.org/licenses/by/3.0/cz/" target="new">CC BY 3.0 CZ</a>)</small>*}
     <br /><br />
     </p>
     </div>

@@ -35,9 +35,9 @@ class ClankyPresenter extends BasePresenter
         $form = new Form;
         $form->addHidden("id");
         $form->addText("titulek", "Titulek")
-            ->addRule(Form::MAX_LENGTH, "Titulek je příliš dlouhý", 64);
+            ->addRule(Form::MAX_LENGTH, "Titulek je příliš dlouhý", 255);
         $form->addText("autor", "Autor")
-            ->addRule(Form::MAX_LENGTH, "Autor je příliš dlouhý", 64);
+            ->addRule(Form::MAX_LENGTH, "Autor je příliš dlouhý", 255);
 
         $form->addSelect("kategorie_id", "Kategorie", $this->kategorie->getPairs());
         $form->addTextArea("perex", "Perex");

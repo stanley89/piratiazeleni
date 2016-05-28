@@ -1,0 +1,100 @@
+<?php
+
+namespace App;
+
+use Nette,
+	Nette\Utils\Strings,
+        Nette\Security\Passwords;
+
+
+/**
+ * Users management.
+ */
+class UserManager extends Nette\Object implements Nette\Security\IAuthenticator
+{
+	const
+		TABLE_NAME = 'uzivatele',
+		COLUMN_ID = 'id',
+		COLUMN_NAME = 'username',
+		COLUMN_PASSWORD_HASH = 'password',
+		COLUMN_ROLE = 'role';
+
+
+	/** @var Nette\Database\Context */
+	private $database;
+
+
+	public function __construct(Nette\Database\Context $database)
+	{
+		$this->database = $database;
+	}
+
+
+	/**
+	 * Performs an authentication.
+	 * @return Nette\Security\Identity
+	 * @throws Nette\Security\AuthenticationException
+	 */
+	public function authenticate(array $credentials)
+	{
+		list($username, $password) = $credentials;
+		$password = self::removeCapsLock($password);
+
+		$row = $this->database->table(self::TABLE_NAME)->where(self::COLUMN_NAME, $username)->fetch();
+
+		if (!$row || empty($row[self::COLUMN_PASSWORD_HASH])) {
+			throw new Nette\Security\AuthenticationException('The username is incorrect.', self::IDENTITY_NOT_FOUND);
+
+		} elseif (!Passwords::verify($password, $row[self::COLUMN_PASSWORD_HASH])) {
+			throw new Nette\Security\AuthenticationException('The password is incorrect.', self::INVALID_CREDENTIAL);
+
+		} elseif (Passwords::needsRehash($row[self::COLUMN_PASSWORD_HASH])) {
+			$row->update(array(
+				self::COLUMN_PASSWORD_HASH => Passwords::hash($password),
+			));
+		}
+
+		$arr = $row->toArray();
+		unset($arr[self::COLUMN_PASSWORD_HASH]);
+
+		$role = $this->getRole($row[self::COLUMN_ID]);
+		return new Nette\Security\Identity($row[self::COLUMN_ID], $role, $arr);
+	}
+
+
+	/**
+	 * Adds new user.
+	 * @param  string
+	 * @param  string
+	 * @return void
+	 */
+	public function add($username, $password)
+	{
+		$this->database->table(self::TABLE_NAME)->insert(array(
+			self::COLUMN_NAME => $username,
+			self::COLUMN_PASSWORD_HASH => Passwords::hash(self::removeCapsLock($password)),
+		));
+	}
+
+
+	/**
+	 * Fixes caps lock accidentally turned on.
+	 * @return string
+	 */
+	private static function removeCapsLock($password)
+	{
+		return $password === Strings::upper($password)
+			? Strings::lower($password)
+			: $password;
+	}
+
+	public function getRole($id) {
+
+		return $this->database->fetchPairs("SELECT id,role
+                    FROM role r
+                    JOIN uzivatele_role ur ON (r.id = ur.role_id)
+                     WHERE ur.uzivatel_id=?;",$id);
+	}
+
+
+}

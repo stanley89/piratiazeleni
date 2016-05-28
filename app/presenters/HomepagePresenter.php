@@ -16,7 +16,7 @@ class HomepagePresenter extends BasePresenter
 
 	public function renderDefault($limit = 10,$offset=0,$url=null,$stitek=null,$search=null)
 	{
-        /*$query = $this->getHttpRequest()->getQuery();
+        $query = $this->getHttpRequest()->getQuery();
         if (!empty($query['c_id'])) {
             $clanek = $this->clanky->getByStareId($query['c_id']);
             $this->redirect("Clanek:default",array("id" => $clanek['id'], "nazev"=> Nette\Utils\Strings::webalize($clanek['titulek'])));
@@ -46,11 +46,9 @@ class HomepagePresenter extends BasePresenter
 
         } elseif ($offset==0 ) {
             $clanky = $this->clanky->getClanky(1, 0,$url,$stitek,$aktuality,$search);
-            $this->template->clanek = $clanky[0];
-            $offset2 =+ 1;
-            $limit2 -= 1;
+
         }
-        $this->template->clanky = $this->clanky->getClanky($limit2, $offset2,$url,$stitek,$aktuality,$search);
+        $this->template->clanky = $this->clanky->getClanky($limit, $offset,$url,$stitek,$aktuality,$search);
 
         $this->payload->append = 'snippet--clanky';
         $this->template->next_offset = $offset+$limit;
@@ -60,7 +58,7 @@ class HomepagePresenter extends BasePresenter
         $this->template->search = $search;
         $this->redrawControl("clanky");
         $this->redrawControl("nacist");
-*/
+
     }
 
     public function actionStary($id) {

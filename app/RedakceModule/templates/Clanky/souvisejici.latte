@@ -1,4 +1,4 @@
-{block full}
+{block content}
 <h1>Související články k {$clanek->titulek}</h1>
 <a n:href="default">všechny články</a>
 {if $user->isAllowed("clanky") || ($user->isAllowed("clanky", "upravit_nevydany") && empty($clanek->datum_vydani))}
