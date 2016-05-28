@@ -49,6 +49,15 @@ h4 {
     font-weight: 700;
     font-size: 9pt;
 }
+.zelena {
+    color: #009933;
+}
+.zluta {
+    color: #ffcc00;
+}
+#komunalky {
+    text-align: center;
+}
 
 .seda {
     color: #736f6e;
@@ -61,6 +70,12 @@ h4 {
 #hlavicka a:hover {
     color: #736f6e;
     text-decoration:none;
+}
+#socialni-prvky {
+    margin-top: 10px;
+    padding-top: 30px;
+    border-top: #000 5px solid;
+    text-align: center;
 }
 .fb-like-box {
     padding: 10px;
@@ -95,7 +110,54 @@ h4 {
 #menu a:hover {
 }
 
+.cv {
+    padding: 5px;
+    margin: 5px;
+}
 
+.cv a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 93%;
+    text-decoration:none;
+}
+.cv a:visited {
+    text-decoration:none;
+}
+
+
+#obsah {
+    width: 70%;
+    margin: 0 auto;
+    text-align:left;
+}
+
+#hlavnipanel {
+    padding: 0;
+    margin:0;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+#hlavnipanel strong, b {
+    font-family: 'arial', sans-serif;
+    font-weight: 700;
+    font-size: 110%;
+}
+
+.kutloch {
+    position: relative;
+    width: 238px;
+    margin: 0;
+    padding: 10px;
+    padding-top: 0;
+    border-right: #000 5px solid;
+    text-align: right;
+    float: left;
+    z-index: 100;
+}
+
+.kutloch h1 {
+    line-height: 130%;
+}
 a {
     color: #000;
     text-decoration:none;
@@ -290,7 +352,8 @@ hr.cleaner
     clear:both;
     display: none
 }
-  
+
+ 
 .w300 {
     width:300px;
 }
@@ -301,7 +364,6 @@ hr.cleaner
 .left {
     float: left;
 }
-
 .clear {
     clear: both;
 }
