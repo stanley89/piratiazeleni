@@ -370,3 +370,10 @@ hr.cleaner
     position:relative;
 }
   
+.w300 {
+    width:300px;
+}
+
+.left {
+    float: left;
+}
