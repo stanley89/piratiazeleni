@@ -3,7 +3,7 @@
 <div>
     <p n:foreach="$kandidati as $kandidat">
         <strong>{$kandidat->pozice}. {$kandidat->jmeno}</strong>
-        ({$kandidat->strana}, {$kandidat->nominace}), {$kandidat->povolani}
+        ({$kandidat->strana}, {$kandidat->nominace}), {$kandidat->mesto}, {$kandidat->povolani}
     </p>
 </div>
 {/block}
