@@ -28,26 +28,6 @@ class HomepagePresenter extends BasePresenter
         if (!is_integer($limit) || $limit<1) {
             $limit = 10;
         }
-        $offset2 = $offset;
-        $limit2 = $limit;
-        if ($url=="aktuality") {
-            $aktuality = true;
-        }
-        if (!empty($url)) {
-            $kat = $this->kategorie->getByUrl($url);
-            $this->template->h1 = $kat['nazev'];
-            $this->template->title = $kat['nazev'];
-        } elseif (!empty($stitek)) {
-            $this->template->h1 = "Štítek ".$stitek;
-            $this->template->title = $this->template->h1;
-        } elseif (!empty($search)) {
-            $this->template->h1 = "Hledání ".$search;
-            $this->template->title = $this->template->h1;
-
-        } elseif ($offset==0 ) {
-            $clanky = $this->clanky->getClanky(1, 0,$url,$stitek,$aktuality,$search);
-
-        }
         $this->template->clanky = $this->clanky->getClanky($limit, $offset,$url,$stitek,$aktuality,$search);
 
         $this->payload->append = 'snippet--clanky';

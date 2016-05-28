@@ -86,12 +86,6 @@ class ClanekPresenter extends BasePresenter
         $this->template->clanek = $clanek;
         $this->template->title = $clanek['titulek'];
         $this->template->komentare = $this->komentare->getForClanek($this->id);
-        $hodnoceni = $this->clanky->getHodnoceni($this->id);
-        if (empty($hodnoceni['plus'])) $hodnoceni['plus'] = 0;
-        if (empty($hodnoceni['minus'])) $hodnoceni['minus'] = 0;
-
-        $this->template->hodnoceni = $hodnoceni;
-        $this->template->moje_hodnoceni = $this->clanky->getHodnoceniByIp($this->id, $_SERVER['REMOTE_ADDR']);
     }
 
 
