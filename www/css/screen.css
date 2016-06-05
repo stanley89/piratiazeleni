@@ -369,4 +369,6 @@ hr.cleaner
 }
 .kandidat .foto {
     float:left;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
