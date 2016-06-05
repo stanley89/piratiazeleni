@@ -28,7 +28,7 @@ class KandidatPresenter extends BasePresenter
     }
     
     public function renderDefault($url) {
-        $kandidat = $this->kandidat->getByUrl($url);
+        $kandidat = $this->kandidati->getByUrl($url);
         if (empty($kandidat)) throw new \Nette\Application\BadRequestException;
         $this->template->kandidat = $kandidat;
     }
