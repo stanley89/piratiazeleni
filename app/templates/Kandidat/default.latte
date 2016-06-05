@@ -4,7 +4,7 @@
 ({$kandidat->strana}, {$kandidat->nominace}), {$kandidat->mesto}, {$kandidat->povolani}
 
 {if !empty($kandidat->upload_id)}
-    <img src="{link :Service:Thumbnail:default, id: $kandidat->upload_id, width:200, format: png}" alt="{$kandidat->jmeno}" class="foto" />
+    <img src="{link :Service:Thumbnail:default, id => $kandidat->upload_id, width => 200, format => png}" alt="{$kandidat->jmeno}" class="foto" />
 {/if}
 {if !empty($kandidat->popis)}
 {!$kandidat->popis}
