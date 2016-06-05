@@ -367,3 +367,6 @@ hr.cleaner
 .clear {
     clear: both;
 }
+.kandidat .foto {
+    float:left;
+}

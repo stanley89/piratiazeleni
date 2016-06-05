@@ -16,9 +16,8 @@
 <div class="clanek_nahled {if empty($clanek->obrazek_id)}clanek_nahled_velky{/if}">
 <div class="color{$clanek->kategorie_id} kategorie_mala">{$clanek->kategorie|stripTags}</div>
 <h2><a n:href="Clanek:default $clanek->id, Nette\Utils\Strings::webalize($clanek['titulek'])">{!$clanek->titulek}</a></h2>
-<div class="datum_diskuze" >{*$clanek->datum_vydani|date:"%d. %m. %Y"*}
-
- {if !empty($clanek->komentaru)}| {$clanek->komentaru} komentářů{/if}
+<div class="datum_diskuze" >
+ {if !empty($clanek->komentaru)}{$clanek->komentaru} komentářů{/if}
  </div>
 <p>{!$clanek->perex|truncate:200}</p>
 </div>

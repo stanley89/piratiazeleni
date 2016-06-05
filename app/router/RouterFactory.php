@@ -26,7 +26,8 @@ class RouterFactory
                 array('module' => 'Service',
                     'presenter' => 'Thumbnail',
                     'action' => 'default'));
-        $router[] = new Route('art/<id>', "Homepage:stary");
+        $router = new Route('kandidati', "Kandidati:default");
+        $router[] = new Route('kandidati/<url>', "Kandidat:default");
         $router[] = new Route('hledani/<search>', "Homepage:default");
         $router[] = new Route('rss/<action>', "Rss:default");
 
