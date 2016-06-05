@@ -367,8 +367,14 @@ hr.cleaner
 .clear {
     clear: both;
 }
+.kandidat h1 {
+    margin-bottom:0px;
+}
 .kandidat .foto {
     float:left;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
+    margin-left: 0px;
+}
+.kandidat table {
+    margin-top:20px;
 }
