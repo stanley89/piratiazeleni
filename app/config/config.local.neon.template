@@ -1,0 +1,14 @@
+parameters:
+
+
+nette:
+	database:
+		dsn: 'mysql:host=127.0.0.1;dbname='
+		user:  
+		password: 
+
+		options:
+			lazy: yes
+	debugger:
+		email: 
+
