@@ -23,6 +23,10 @@ class Kandidati extends \Nette\Object
     public function getAll() {
         return $this->database->fetchAll("SELECT * FROM kandidati ORDER by pozice asc;");
     }
+    
+    public function getByUrl($url) {
+        return $this->database->fetch("SELECT * FROM kandidati WHERE url=?;",$url);
+    }
 
 }
 

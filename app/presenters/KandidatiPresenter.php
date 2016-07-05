@@ -14,7 +14,7 @@ class KandidatiPresenter extends BasePresenter
     /** @var Models/Kandidati */
     private $kandidati;
 
-    public function injectUpload(\Models\Kandidati $kandidati)
+    public function injectKandidati(\Models\Kandidati $kandidati)
     {
         $this->kandidati = $kandidati;
     }

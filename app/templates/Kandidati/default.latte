@@ -2,7 +2,7 @@
 <h1>Kandidáti</h1>
 <div>
     <p n:foreach="$kandidati as $kandidat">
-        <strong>{$kandidat->pozice}. {$kandidat->jmeno}</strong>
+        <a n:href="Kandidat:default $kandidat->url"><strong>{$kandidat->pozice}. {$kandidat->jmeno}</strong></a>
         ({$kandidat->strana}, {$kandidat->nominace}), {$kandidat->mesto}, {$kandidat->povolani}
     </p>
 </div>
