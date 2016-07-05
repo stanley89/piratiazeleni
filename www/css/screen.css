@@ -378,3 +378,7 @@ hr.cleaner
 .kandidat table {
     margin-top:20px;
 }
+.clanek_obrazek {
+    float:left;
+    margin-right:20px;
+}
