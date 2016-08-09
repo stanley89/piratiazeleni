@@ -148,22 +148,6 @@ h4 {
     padding-top: 10px;
     padding-bottom:10px;
 }
-
-.kutloch {
-    position: relative;
-    width: 238px;
-    margin: 0;
-    padding: 10px;
-    padding-top: 0;
-    border-right: #000 5px solid;
-    text-align: right;
-    float: left;
-    z-index: 100;
-}
-
-.kutloch h1 {
-    line-height: 130%;
-}
 a {
     color: #000;
     text-decoration:none;
@@ -177,62 +161,6 @@ a:hover {
 a:visited {
     color: #736f6e;
     text-decoration:none;
-}
-
-.kutloch1 {
-    position: relative;
-    width: 450px;
-    min-height: 490px; /* pro standardní prohlížeče */
-    _height: 500px; /* pro Internet Explorer, který to chápe jako min-height*/
-    margin: 0;
-    margin-top: 5px;
-    padding: 0;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    display: block;
-}
-
-.kandidat-cislo {
-    margin-right: 30px;
-}
-.piratsky-kandidat {
-    width: 98%;
-    margin: 3px;
-    padding: 3px;
-    padding-left: 15px;
-    text-align: left;
-    display: block;
-    background: #ffcc00;
-}
-.zeleny-kandidat {
-    width: 98%;
-    margin: 3px;
-    padding: 3px;
-    padding-left: 15px;
-    text-align: left;
-    display: block;
-    background: #009933;
-    color: #fff;
-}
-.kandidat-foto {
-    width: 50px;
-    margin-right: 20px;
-    float: left;
-    border: 2px solid #fff;
-    width: 50px;
-    height: 50px;
-    -webkit-border-radius: 30px; /* Saf3+, Chrome */
-    border-radius: 30px; /* Opera 10.5, IE 9 */
-    /*-moz-border-radius: 30px;  Disabled for FF1+ */
-}
-.avatar {
-    margin-right: 20px;
-    border: 2px solid #fff;
-    width: 175px;
-    height: 175px;
-    -webkit-border-radius: 160px; /* Saf3+, Chrome */
-    border-radius: 160px; /* Opera 10.5, IE 9 */
-    /*-moz-border-radius: 160px;  Disabled for FF1+ */
 }
 
 .kandidat-radek a {
@@ -255,56 +183,6 @@ a.kandidat {
 a:hover.kandidat {
     color: #000;
     background: #fff;
-}
-
-.kutloch2 {
-    position: relative;
-    width: 560px;
-    min-height: 490px; /* pro standardní prohlížeče */
-    _height: 500px; /* pro Internet Explorer, který to chápe jako min-height*/
-    margin: 0;
-    margin-top: 5px;
-    padding: 15px;
-    padding-left: 400px;
-    display: block;
-}
-
-.levy-kutloch {
-    position: relative;
-    width: 46%;
-    float: left;
-    margin: 0;
-    margin-top: 5px;
-    padding: 15px;
-    background: #ffcc00;
-}
-.levy-kutloch  a {
-    color: #000;
-    text-decoration:none;
-}
-.levy-kutloch a:hover {
-    color: #736f6e;
-    text-decoration:none;
-}
-.levy-kutloch a:visited {
-    color: #736f6e;
-    text-decoration:none;
-}
-.nadpis-kutloch {
-    text-transform: uppercase;
-    font-family: 'arial', sans-serif;
-    font-weight: 700;
-    font-size: 140%;
-}
-.pravy-kutloch {
-    position: relative;
-    width: 46%;
-    margin: 0;
-    margin-top: 5px;
-    margin-left: 51%;
-    padding: 15px;
-    background: #009933;
-    color: #fff;
 }
 
 .fotopopisek {
