@@ -130,6 +130,17 @@ h4 {
     margin: 0 auto;
     text-align:left;
 }
+@media (min-width: 1000px) {
+  #obsah {
+    width: 900px;
+  }
+}
+@media (min-width: 1400px) {
+  #obsah {
+    width: 1200px;
+  }
+}
+
 
 #hlavnipanel {
     padding: 0;
