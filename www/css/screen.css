@@ -358,6 +358,9 @@ hr.cleaner
 .h200 {
     height:200px;
 }
+.h400 {
+    height:400px;
+}
 .left {
     float: left;
 }
