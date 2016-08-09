@@ -365,6 +365,12 @@ hr.cleaner
 .w300 {
     width:300px;
 }
+.w280 {
+    width:280px;
+}
+.m10 {
+    margin:10px;
+}
 
 .h200 {
     height:200px;
