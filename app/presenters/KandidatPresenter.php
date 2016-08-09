@@ -31,5 +31,6 @@ class KandidatPresenter extends BasePresenter
         $kandidat = $this->kandidati->getByUrl($url);
         if (empty($kandidat)) throw new \Nette\Application\BadRequestException;
         $this->template->kandidat = $kandidat;
+		$this->template->title = $kandidat['jmeno'];
     }
 }

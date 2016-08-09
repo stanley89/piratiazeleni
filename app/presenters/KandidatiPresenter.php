@@ -20,6 +20,7 @@ class KandidatiPresenter extends BasePresenter
     }
 
     public function renderDefault() {
+		$this->template->title = "Kandidáti 2016";
         $this->template->kandidati = $this->kandidati->getAll();
     }
 }

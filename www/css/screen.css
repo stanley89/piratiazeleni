@@ -346,6 +346,9 @@ hr.cleaner
     clear:both;
     display: none
 }
+.right {
+    text-align:right;
+}
 
  
 .w300 {

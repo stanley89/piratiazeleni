@@ -16,7 +16,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 
-	<title>{ifset $title}{$title|striptags|truncate:100} - Piráti a strana zelených{else}{block title|striptags}Piráti a Strana zelených – Krajské volby 2016, Královéhradecký kraj{/block}{/ifset}</title>
+	<title>{ifset $title}{$title|striptags|truncate:100} - Piráti a Strana zelených + Změna pro Královéhradecký kraj{else}{block title|striptags}Krajské volby 2016 – Piráti a Strana zelených + Změna pro Královéhradecký kraj{/block}{/ifset}</title>
 	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/screen.css">
     {*<link rel="stylesheet" media="screen and (max-width: 1000px)" href="{$basePath}/css/tablet.css">
     <link rel="stylesheet" media="screen and (max-width: 500px)" href="{$basePath}/css/mobile.css">
@@ -44,6 +44,7 @@
 
     <a n:href=":Homepage:" title="Aktuálně">Aktuálně</a>
     | <a n:href=":Kandidati:default" title="Kandidáti">Kandidáti</a>
+    | <a n:href=":Homepage:financovani" title="Kandidáti">Financování</a>
     | <a n:href=":Homepage:kontakt" title="Kontakt">Kontakt</a>
     </div>
     <a n:href=":Homepage:" title="Piráti a Strana zelených – Krajské volby 2016, Královéhradecký kraj">
