@@ -1,9 +1,12 @@
 {block content}
 <h1>Kandidáti pro volby v Královéhradeckém kraji 2016</h1>
 <div>
-    <p n:foreach="$kandidati as $kandidat">
-        <a n:href="Kandidat:default $kandidat->url"><strong>{$kandidat->pozice}. {$kandidat->jmeno}</strong></a>
-        {$kandidat->mesto}, {$kandidat->povolani}
-    </p>
+    <div n:foreach="$kandidati as $kandidat" class="w280 m10 h450 left">
+        <a n:href="Kandidat:default $kandidat->url">
+            <img src="{link :Service:Thumbnail:default, id => 7, width => 200, format => png}" alt="{$kandidat->pozice}. {$kandidat->jmeno}" />
+            <h3>{$kandidat->pozice}. {$kandidat->jmeno}</h3>
+            <p>{$kandidat->mesto}, {$kandidat->povolani}</p>
+        </a>
+    </div>
 </div>
 {/block}
