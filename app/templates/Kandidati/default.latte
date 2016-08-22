@@ -3,7 +3,7 @@
 <div>
     <div n:foreach="$kandidati as $kandidat" class="w280 m10 h450 left">
         <a n:href="Kandidat:default $kandidat->url">
-            <img src="{link :Service:Thumbnail:default, id => $kandidat->upload_id, width => 200, format => png}" alt="{$kandidat->jmeno}" />
+            <img src="{link :Service:Thumbnail:default, id => $kandidat->upload_id, width => 200, height => 300, crop => crop, format => png}" alt="{$kandidat->jmeno}" />
             <h3>{$kandidat->pozice}. {$kandidat->jmeno}</h3>
             <p>{$kandidat->mesto}, {$kandidat->povolani}</p>
         </a>
