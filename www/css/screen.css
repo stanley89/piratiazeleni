@@ -278,3 +278,7 @@ hr.cleaner
     float:left;
     margin-right:20px;
 }
+.kandidati img {
+    height:300px;
+    display: block;
+}
