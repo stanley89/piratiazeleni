@@ -10,7 +10,7 @@
 <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 <p>{!$clanek->perex}</p>
 {if !empty($clanek->obrazek_id)}
-<img class="hlavni" src="{link Service:Thumbnail:default 'id' => $clanek->obrazek_id, 'width' => 600, height => 200, format => jpg}" alt="{$clanek->alt}" title="{$clanek->title}" width="600"/>
+<img class="hlavni" src="{link Service:Thumbnail:default 'id' => $clanek->obrazek_id, 'width' => 600, height => 200, format => jpg}" alt="{$clanek->alt}" title="{$clanek->title}" />
 {/if}
 <div class="clear">
 {!$clanek->text}
