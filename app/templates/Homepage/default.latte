@@ -8,7 +8,7 @@
 <div class="clanek_obrazek">
 <a n:href="Clanek:default $clanek->id, Nette\Utils\Strings::webalize($clanek['titulek'])">
 {if !empty($clanek->obrazek_id)}
-<img src="{link Service:Thumbnail:default $clanek->obrazek_id, 'width' => 200, 'format' => png}" alt="{$clanek->alt}" title="{$clanek->title}" />
+<img src="{link Service:Thumbnail:default $clanek->obrazek_id, 'width' => 200, 'height' => 200, format' => png}" alt="{$clanek->alt}" title="{$clanek->title}" />
 {/if}
 </a>
 </div>
