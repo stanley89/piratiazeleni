@@ -9,29 +9,358 @@ V kampani se využívají dva transparentní účty:
 <h2>Rozpočet</h2>
 <p>Každá ze stran (Česká pirátská strana a Strana zelených) přispívá na volební kampaň částkou nejméně 200 000 Kč. Celkem tedy základní rozpočet dosahuje částky 400 000 Kč.
 
-<table>
-    <tr><th>Položka</th><th>Plán</th><th>Čerpání</th><th>Skutečnost</th></tr>
-    <tr><td>Hromadná doprava</td><td class="right">0 Kč</td><td><a href="{$basePath}/docs/financovani/dpmhk.pdf">Faktura</a></td><td class="right">48 981 Kč</td></tr>
-    <tr><td>Nádraží</td><td class="right">0 Kč</td></tr>
-    <tr><td>Media, tištěné noviny</td><td class="right">	0 Kč</td></tr>
-    <tr><td>Billboardy</td><td class="right"> 	0 Kč</td></tr>
-    <tr><td>Letáky</td><td class="right"> 	0 Kč</td></tr>
-    <tr><td>Volební noviny</td><td class="right">	135 000 Kč</td><td><a href="{$basePath}/docs/financovani/noviny.pdf">Záloha</a></td><td class="right">92 000 Kč</td></tr>
-    <tr><td>Roznos</td><td class="right"> 	50 000 Kč</td></tr>
-    <tr><td>Propagační předměty</td><td class="right"> 	0 Kč</td></tr>
-    <tr><td>E-mailing a sms</td><td class="right">	0 Kč</td></tr>
-    <tr><td>Doprava a občerstvení</td><td class="right">	10 000 Kč</td></tr>
-    <tr><td>Poštovné</td><td class="right"> 	2 000 Kč</td></tr>
-    <tr><td>Plakáty tisk a výlep</td><td class="right">	100 000 Kč</td></tr>
-    <tr><td>Náklady na fotografování</td><td class="right"> 	15 000 Kč</td><td><a href="{$basePath}/docs/financovani/foceni1.pdf">Fotografování kandidátů 1</a><br /><a href="{$basePath}/docs/financovani/foceni2.pdf">Fotografování kandidátů 2</a><br /><a href="{$basePath}/docs/financovani/foceni3.pdf">Fotografování kandidátů 3</a><br /></td><td class="right">6200 Kč</td></tr>
-    <tr><td>Obecní zpravodaje</td><td class="right"> 	10 000 Kč</td></tr>
-    <tr><td>FB reklama a online Youtube</td><td class="right"> 	30 000 Kč</td></tr>
-    <tr><td>Online google/seznam reklama</td><td class="right"> 	0 Kč</td></tr>
-    <tr><td>Tvorba videi + grafika</td><td class="right">	30 000 Kč</td></tr>
-    <tr><td>Rezerva</td><td class="right">18 000 Kč</td></tr>
-    <tr><th>SUMA</th><td class="right"><strong>400 000 Kč</strong></td><td></td><td class="right">147 181 Kč</td></tr>
+<table border="1" style="border-collapse: collapse;">
+    <tr><th>Položka</th><th>Plán</th><th colspan="2">Výdaje Piráti</th><th colspan="2">Výdaje SZ</th><th>Výdaje celkem</th></tr>
+    <tr>
+        <td>Hromadná doprava</td>
+        <td class="right">0&nbsp;Kč</td>
+        <td colspan="2"></td>
+        <td>
+            <a href="{$basePath}/docs/financovani/dpmhk.pdf">DPMHK</a>
+        </td>
+        <td class="right">48&nbsp;981&nbsp;Kč</td>
+
+        <td class="right">48&nbsp;981&nbsp;Kč</td>
+    </tr>
+    {*<tr><td>Nádraží</td><td class="right">0 Kč</td></tr>*}
+    <tr>
+        <td rowspan="2">Media, tištěné noviny</td>
+        <td class="right" rowspan="2">	0&nbsp;Kč</td>
+        <td><a href="{$basePath}/docs/financovani/mafra2016_khk.pdf">MF DNES</a></td>
+        <td class="right">6&nbsp;969&nbsp;Kč</td>
+        <td><a href="{$basePath}/docs/financovani/mafra2016_sz.pdf">MF DNES</a></td>
+        <td class="right"> 6&nbsp;098&nbsp;Kč</td>
+        <td class="right" rowspan="2">	43&nbsp;317&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td>Deník</td>
+        <td class="right">30&nbsp;250&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>Billboardy</td>
+        <td class="right"> 	0&nbsp;Kč</td>
+        <td>
+            <a href="{$basePath}/docs/financovani/dpmhk.pdf">Tisk</a>
+        </td>
+        <td class="right"> 1&nbsp;089&nbsp;Kč</td>
+        <td colspan="2"></td>
+        <td class="right"> 	1&nbsp;089&nbsp;Kč</td>
+    </tr>
+    {*<tr>
+        <td>Letáky</td>
+        <td class="right"> 	0&nbsp;Kč</td>
+
+    </tr>*}
+    <tr>
+        <td rowspan="2">Volební noviny</td>
+        <td class="right" rowspan="2">	135&nbsp;000&nbsp;Kč</td>
+        <td>
+            <a href="{$basePath}/docs/financovani/noviny.pdf">Tisk</a>
+        </td>
+        <td class="right">
+            92&nbsp;000&nbsp;Kč
+        </td>
+        <td>
+            Uskladnění a převoz ČP
+        </td>
+        <td class="right">
+            1&nbsp;082&nbsp;Kč
+        </td>
+
+        <td class="right" rowspan="2">101&nbsp;582&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/noviny2016_khk.pdf">Tvorba</a>
+        </td>
+        <td class="right">
+            8&nbsp;500&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>Roznos</td>
+        <td class="right"> 	500&nbsp;0000&nbsp;Kč</td>
+        <td colspan="2"></td>
+
+        <td>Roznos</td>
+        <td class="right">51&nbsp;938&nbsp;Kč</td>
+        <td class="right">51&nbsp;938&nbsp;Kč</td>
+    </tr>
+{*    <tr><td>Propagační předměty</td>
+        <td class="right"> 	0&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>E-mailing a sms</td>
+        <td class="right">	0&nbsp;Kč</td>
+    </tr>*}
+    <tr>
+        <td>Doprava a občerstvení</td>
+        <td class="right">	10&nbsp;000&nbsp;Kč</td>
+        <td colspan="2"></td>
+
+        <td>Občerstvení</td>
+        <td class="right">10&nbsp;686&nbsp;Kč</td>
+        <td class="right">10&nbsp;686&nbsp;Kč</td>                
+    </tr>
+    <tr>
+        <td>Poštovné</td>
+        <td class="right"> 	2&nbsp;000&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td rowspan="15">Plakáty tisk a výlep</td>
+        <td rowspan="15" class="right">	100&nbsp;000&nbsp;Kč</td>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_a2.pdf">Tisk A2</a>
+        </td>
+        <td class="right">
+            24&nbsp;394&nbsp;Kč
+        </td>
+        <td class="right"> 	0&nbsp;Kč</td>
+        <td class="right"> 	0&nbsp;Kč</td>
+        <td class="right"> 	44&nbsp;541&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/tisk2016_standa.pdf">Tisk A3</a>
+        </td>
+        <td class="right">
+            2&nbsp;723&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_adam.pdf">Třebechovice pod Oreben, Týniště nad Orlicí,<br /> Vamberk, Kostelec nad Orlicí,<br /> Rychnov nad Kněžnou</a>
+        </td>
+        <td class="right">
+            1&nbsp;837&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_broumov.pdf">Broumov</a>
+        </td>
+        <td class="right">
+            355&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_hostinne.pdf">Hostinné</a>
+        </td>
+        <td class="right">
+            108&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_broumov.pdf">Broumov</a>
+        </td>
+        <td class="right">
+            355&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_martin.pdf">Úpice, Dvůr Králové nad Labem</a>
+        </td>
+        <td class="right">
+            1&nbsp;800&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_michal.pdf">Jaroměř</a>
+        </td>
+        <td class="right">
+            192&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_nachod.pdf">Náchod</a>
+        </td>
+        <td class="right">
+            480&nbsp;Kč
+        </td>
+    </tr>            
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_pavel.pdf">Opočno, Dobruška</a>
+        </td>
+        <td class="right">
+            1&nbsp;548&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_police.pdf">Police nad Metují</a>
+        </td>
+        <td class="right">
+            525&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_standa.pdf">Nová Paka</a>
+        </td>
+        <td class="right">
+            550&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_trutnov.pdf">Trutnov</a>
+        </td>
+        <td class="right">
+            968&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/plakaty2016_zdena.pdf">Nový Bydžov</a>
+        </td>
+        <td class="right">
+            424&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/rengl2016_khk.pdf">Hradec Králové, Jičín, Hořice, Sobotka</a>
+        </td>
+        <td class="right">
+            8&nbsp;282&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="3">Náklady na fotografování</td>
+        <td rowspan="3" class="right"> 	15&nbsp;000&nbsp;Kč</td>
+        <td colspan="2" rowspan="3"></td>
+        <td>
+            <a href="{$basePath}/docs/financovani/foceni1.pdf">Fotografování kandidátů 1</a>
+        </td>
+        <td class="right">
+            3&nbsp;000&nbsp;Kč
+        </td>
+        <td rowspan="3" class="right">6&nbsp;200&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/foceni2.pdf">Fotografování kandidátů 2</a>
+        </td>
+        <td class="right">
+            3&nbsp;000&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{$basePath}/docs/financovani/foceni3.pdf">Fotografování kandidátů 3</a>
+        </td>
+        <td class="right">
+            200&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="7">Obecní zpravodaje</td>
+        <td class="right"  rowspan="7"> 	10&nbsp;000&nbsp;Kč</td>
+        <td colspan="2" rowspan="7"></td>
+        <td>Třebechovice pod Orebem</td>
+        <td class="right">2&nbsp;000&nbsp;Kč</td>
+        <td class="right"  rowspan="7"> 	9&nbsp;426&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>Nový Bydžov</td>
+        <td class="right">1&nbsp;200&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>Jaroměř+Josefov</td>
+        <td class="right">1&nbsp;500&nbsp;Kč</td>
+    </tr>        
+    <tr>
+        <td>Rychnov nad Kněžnou</td>
+        <td class="right">2&nbsp;226&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>Vamberk</td>
+        <td class="right">1&nbsp;000&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>Dobruška</td>
+        <td class="right">1&nbsp;000&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>Chlumec nad Cidlinou</td>
+        <td class="right">500&nbsp;Kč</td>
+    </tr>
+        
+    <tr>
+        <td>FB reklama a online Youtube</td>
+        <td class="right" > 	30&nbsp;000&nbsp;Kč</td>
+        <td>FB reklama</td>
+        <td class="right">6&nbsp;581&nbsp;Kč</td>
+        <td>FB marketér</td>
+        <td class="right">5&nbsp;000&nbsp;Kč</td>
+        <td class="right">11&nbsp;581&nbsp;Kč</td>
+    </tr>
+    {*<tr>
+        <td>Online google/seznam reklama</td>
+        <td class="right"> 	0&nbsp;Kč</td>
+    </tr>*}
+    <tr>
+        <td rowspan="2">Tvorba videi + grafika</td>
+        <td class="right" rowspan="2">	30&nbsp;000&nbsp;Kč</td>
+        <td>
+            <a href="{$basePath}/docs/financovani/videa2016_khk.pdf">Tvorba videí</a>
+        </td>
+        <td class="right">
+            8&nbsp;000&nbsp;Kč
+        </td>
+        <td rowspan="2" colspan="2"></td>
+
+        <td class="right" rowspan="2">
+            17&nbsp;500&nbsp;Kč
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Grafika
+        </td>
+        <td class="right">
+            9&nbsp;500&nbsp;Kč
+        </td>
+       
+    </tr>
+    <tr>
+        <td>Bannery</td>
+        <td class="right">0&nbsp;Kč</td>
+        <td colspan="2"></td>
+        <td>Bannery</td>
+        <td class="right">9&nbsp;837&nbsp;Kč</td>
+        <td class="right">9&nbsp;837&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <td>Volební manažer</td>
+        <td class="right">0&nbsp;Kč (30&nbsp;000&nbsp;Kč*)</td>
+        <td colspan="2"></td>
+        <td>Volební manažer</td>
+        <td class="right">35&nbsp;000&nbsp;Kč</td>
+        <td class="right">35&nbsp;000&nbsp;Kč</td>        
+    </tr>
+
+    <tr>
+        <td>Rezerva</td>
+        <td class="right">18&nbsp;000&nbsp;Kč</td>
+    </tr>
+    <tr>
+        <th>Celkem</th>
+        <th class="right">400&nbsp;000&nbsp;Kč</th>
+        <th colspan="2" class="right">177&nbsp;180&nbsp;Kč</td>
+        <th colspan="2" class="right"> 214&nbsp;498&nbsp;Kč</th>
+        <th class="right">391&nbsp;678&nbsp;Kč</th>
+    </tr>
 
 </table>
+<p>*) v případě nezískání žádného mandátu by celou částku na odměnu volebního manažera hradila jen Strana zelených</p>
 <h2>Podpora center politických stran</h2>
 <p>Mediální odbor České pirátské strany poskytne krajskému sdružení část finančních prostředků na tisk volebních novin. Částka bude upřesněna. Dále mediální odbor poskytuje pomoc s výběrovým řízením na tiskárnu novin a další podporu formou grafických šablon, textů a konzultací.</p>
 <p>Centrála Strany zelených přispívá na kampaň částkou 259 773,85 Kč. Žádná další materiální podpora není, jedná se spíše o konzultační činnost. Veškeré náklady, které takto vzniknou, budou přeúčtovány kraji (například centrální nákup reklamních předmětů).</p>
